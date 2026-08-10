@@ -1,145 +1,973 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Maan Taxi Service | Premium Taxi & Tours</title>
+  <title>Maan Taxi Service | Premium Taxi & Tour</title>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+  <meta name="description"
+        content="Maan Taxi Service - One Way Trips, Family Tours, Outstation Taxi and Hill Station Tours.">
 
-html{
-  scroll-behavior:smooth;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f7f2e8;
-  color:#24181b;
-  line-height:1.6;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-a{
-  text-decoration:none;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f3ee;
+      color: #18211f;
+      line-height: 1.6;
+    }
 
-.container{
-  width:92%;
-  max-width:1150px;
-  margin:auto;
-}
+    :root {
+      --dark: #102f2b;
+      --green: #164e45;
+      --gold: #d6a84f;
+      --cream: #f5f3ee;
+      --white: #ffffff;
+      --text: #18211f;
+      --muted: #69736f;
+    }
 
-/* HEADER */
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:999;
-  background:#3b0d18;
-  border-bottom:1px solid rgba(255,255,255,.15);
-}
+    /* NAVBAR */
 
-.nav{
-  min-height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(16, 47, 43, 0.97);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
 
-.logo{
-  color:white;
-  font-size:21px;
-  font-weight:900;
-}
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-.logo span{
-  color:#e4c778;
-}
+    .logo {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 800;
+    }
 
-.nav-links{
-  display:flex;
-  gap:25px;
-  align-items:center;
-}
+    .logo span {
+      color: var(--gold);
+    }
 
-.nav-links a{
-  color:white;
-  font-size:13px;
-  font-weight:bold;
-}
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
 
-.nav-links a:hover{
-  color:#e4c778;
-}
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
 
-.call-btn{
-  background:#e4c778;
-  color:#24181b !important;
-  padding:10px 17px;
-  border-radius:30px;
-}
+    .nav-links a:hover {
+      color: var(--gold);
+    }
 
-/* HERO */
-.hero{
-  padding:145px 0 80px;
-  color:white;
-  background:
-  radial-gradient(circle at 85% 15%,rgba(228,199,120,.2),transparent 25%),
-  linear-gradient(135deg,#21070e,#5a1b29 60%,#3b0d18);
-}
+    /* HERO */
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:50px;
-  align-items:center;
-}
+    .hero {
+      background:
+        linear-gradient(135deg, #102f2b, #1b5b50);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
 
-.badge{
-  display:inline-block;
-  padding:8px 15px;
-  border:1px solid rgba(228,199,120,.4);
-  border-radius:30px;
-  color:#e4c778;
-  font-size:10px;
-  letter-spacing:2px;
-  font-weight:bold;
-  margin-bottom:20px;
-}
+    .hero small {
+      color: #e3c477;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
 
-.hero h1{
-  font-size:clamp(45px,7vw,75px);
-  line-height:1;
-  letter-spacing:-3px;
-  margin-bottom:22px;
-}
+    .hero h1 {
+      max-width: 850px;
+      margin: 15px auto;
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
+      font-weight: 900;
+    }
 
-.hero h1 span{
-  color:#e4c778;
-}
+    .hero h1 span {
+      color: var(--gold);
+    }
 
-.hero p{
-  color:#ddd0d0;
-  max-width:620px;
-  font-size:17px;
-  margin-bottom:28px;
-}
+    .hero p {
+      max-width: 700px;
+      margin: 20px auto 35px;
+      font-size: 19px;
+      color: #e8efed;
+    }
 
-.buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #18211f;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
 
-.btn{
-  min-height:50px;
-  padding:0 22px;
-  display:inline-flex;
-  align-items:center;
-  justify-content
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #e4bd67;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.5);
+      margin-left: 10px;
+    }
+
+    /* STATS */
+
+    .stats {
+      max-width: 1100px;
+      margin: -45px auto 70px;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .stat {
+      background: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--green);
+      font-size: 30px;
+      font-weight: 900;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* SECTION */
+
+    section {
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 45px;
+    }
+
+    .section-title small {
+      color: #a77d28;
+      font-size: 14px;
+      letter-spacing: 3px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      margin: 10px 0;
+      color: var(--dark);
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.15;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: #eeeae1;
+    }
+
+    .service-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #e4e0d7;
+      transition: 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    }
+
+    .service .icon {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .service h3 {
+      color: var(--dark);
+      margin-bottom: 8px;
+      font-size: 22px;
+    }
+
+    .service p {
+      color: var(--muted);
+    }
+
+    /* ROUTES */
+
+    .routes {
+      background: var(--cream);
+    }
+
+    .route-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .route {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid var(--gold);
+      font-weight: 700;
+      color: var(--dark);
+      box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+    }
+
+    .route span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    /* BOOKING */
+
+    .booking {
+      background: var(--dark);
+      color: white;
+    }
+
+    .booking-box {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      color: var(--text);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+
+    .booking-box h2 {
+      text-align: center;
+      color: var(--dark);
+      font-size: 35px;
+      margin-bottom: 8px;
+    }
+
+    .booking-box > p {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      margin-bottom: 7px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d6d9d7;
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: inherit;
+      outline: none;
+      background: #fafafa;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--gold);
+      background: white;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .submit-area {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--gold);
+      color: #18211f;
+      border: none;
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #e4bd67;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: #eeeae1;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: var(--dark);
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .phone {
+      display: inline-block;
+      margin: 20px 0;
+      color: var(--green);
+      font-size: 28px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .contact p {
+      color: var(--muted);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #0b2421;
+      color: #cdd7d4;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer strong {
+      color: white;
+      font-size: 20px;
+    }
+
+    footer p {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .navbar {
+        padding: 15px 18px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 75px 18px;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .btn-outline {
+        margin: 10px 0 0;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+        margin-top: -25px;
+      }
+
+      .service-grid,
+      .route-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 16px;
+      }
+
+      .booking-box {
+        padding: 25px 18px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .phone {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header>
+    <nav class="navbar">
+
+      <a href="#" class="logo">
+        🚕 Maan <span>Taxi Service</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#routes">Routes</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <small>Premium Taxi & Tour Service</small>
+
+    <h1>
+      Your Journey.<br>
+      <span>Our Responsibility.</span>
+    </h1>
+
+    <p>
+      Comfortable taxi service for local travel,
+      one-way trips, family tours, outstation journeys
+      and beautiful North India destinations.
+    </p>
+
+    <a href="#booking" class="btn">
+      Book Your Taxi
+    </a>
+
+    <a href="tel:+916284022835" class="btn btn-outline">
+      Call Now
+    </a>
+
+  </section>
+
+
+  <!-- STATS -->
+
+  <div class="stats">
+
+    <div class="stat">
+      <strong>24/7</strong>
+      <span>Booking Support</span>
+    </div>
+
+    <div class="stat">
+      <strong>100%</strong>
+      <span>Customer Focus</span>
+    </div>
+
+    <div class="stat">
+      <strong>Safe</strong>
+      <span>Comfortable Rides</span>
+    </div>
+
+  </div>
+
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <div class="section-title">
+
+      <small>Our Services</small>
+
+      <h2>Travel Your Way</h2>
+
+      <p>
+        Professional taxi solutions designed
+        for every journey.
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+      <div class="service">
+        <div class="icon">🚕</div>
+        <h3>One Way Trip</h3>
+        <p>
+          Reliable one-way taxi service
+          for comfortable point-to-point travel.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">👨‍👩‍👧‍👦</div>
+        <h3>Family Tour</h3>
+        <p>
+          Comfortable family travel with
+          flexible routes and trip planning.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">🏔️</div>
+        <h3>Hill Station Tours</h3>
+        <p>
+          Explore Manali, Shimla, Dalhousie,
+          Dharamshala and other destinations.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">🛣️</div>
+        <h3>Outstation Taxi</h3>
+        <p>
+          Long-distance travel with
+          comfortable and dependable rides.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">✈️</div>
+        <h3>Airport Transfer</h3>
+        <p>
+          Convenient pickup and drop
+          service for airport journeys.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">🧳</div>
+        <h3>Custom Tour</h3>
+        <p>
+          Create your own travel plan
+          according to your requirements.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ROUTES -->
+
+  <section class="routes" id="routes">
+
+    <div class="section-title">
+
+      <small>Popular Routes</small>
+
+      <h2>Explore North India</h2>
+
+      <p>
+        Taxi and tour services available
+        for popular destinations.
+      </p>
+
+    </div>
+
+
+    <div class="route-grid">
+
+      <div class="route">
+        Delhi
+        <span>City & Outstation Trips</span>
+      </div>
+
+      <div class="route">
+        Chandigarh
+        <span>Pickup & Drop</span>
+      </div>
+
+      <div class="route">
+        Manali
+        <span>Hill Station Tour</span>
+      </div>
+
+      <div class="route">
+        Shimla
+        <span>Hill Station Tour</span>
+      </div>
+
+      <div class="route">
+        Dalhousie
+        <span>Family & Holiday Tours</span>
+      </div>
+
+      <div class="route">
+        Dharamshala
+        <span>Tour & Outstation Taxi</span>
+      </div>
+
+      <div class="route">
+        Kedarnath
+        <span>Pilgrimage Tour</span>
+      </div>
+
+      <div class="route">
+        Hemkunt Sahib
+        <span>Pilgrimage Tour</span>
+      </div>
+
+      <div class="route">
+        Gurdaspur
+        <span>Local & Outstation</span>
+      </div>
+
+      <div class="route">
+        Pathankot
+        <span>Pickup & Drop</span>
+      </div>
+
+      <div class="route">
+        Sirhind
+        <span>Local & Outstation</span>
+      </div>
+
+      <div class="route">
+        Wagah Border
+        <span>Tour & Sightseeing</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BOOKING -->
+
+  <section class="booking" id="booking">
+
+    <div class="booking-box">
+
+      <h2>Book Your Taxi</h2>
+
+      <p>
+        Fill the details below and send your booking
+        directly on WhatsApp.
+      </p>
+
+
+      <form id="bookingForm">
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            >
+          </div>
+
+
+          <div class="field">
+            <label for="mobile">Mobile Number</label>
+            <input
+              type="tel"
+              id="mobile"
+              placeholder="Enter mobile number"
+              pattern="[0-9]{10}"
+              maxlength="10"
+              required
+            >
+          </div>
+
+
+          <div class="field">
+            <label for="pickup">Pickup Location</label>
+            <input
+              type="text"
+              id="pickup"
+              placeholder="Example: Chandigarh"
+              required
+            >
+          </div>
+
+
+          <div class="field">
+            <label for="destination">Destination</label>
+            <input
+              type="text"
+              id="destination"
+              placeholder="Example: Manali"
+              required
+            >
+          </div>
+
+
+          <div class="field">
+            <label for="trip">Trip Type</label>
+
+            <select id="trip" required>
+
+              <option value="">
+                Select Trip Type
+              </option>
+
+              <option>
+                One Way Trip
+              </option>
+
+              <option>
+                Family Tour
+              </option>
+
+              <option>
+                Round Trip
+              </option>
+
+              <option>
+                Outstation Trip
+              </option>
+
+              <option>
+                Airport Transfer
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="field">
+            <label for="date">Travel Date</label>
+
+            <input
+              type="date"
+              id="date"
+              required
+            >
+
+          </div>
+
+
+          <div class="field">
+            <label for="passengers">
+              Number of Passengers
+            </label>
+
+            <select id="passengers">
+
+              <option>1-3 Passengers</option>
+              <option>4-5 Passengers</option>
+              <option>6-7 Passengers</option>
+              <option>8+ Passengers</option>
+
+            </select>
+
+          </div>
+
+
+          <div class="field">
+            <label for="car">
+              Vehicle Preference
+            </label>
+
+            <select id="car">
+
+              <option>Any Available Car</option>
+              <option>Sedan</option>
+              <option>SUV</option>
+              <option>Innova</option>
+              <option>Tempo Traveller</option>
+
+            </select>
+
+          </div>
+
+
+          <div class="field full">
+
+            <label for="message">
+              Additional Requirement
+            </label>
+
+            <textarea
+              id="message"
+              placeholder="Tell us anything about your trip..."
+            ></textarea>
+
+          </div>
+
+        </div>
+
+
+        <div class="submit-area">
+
+          <button
+            type="submit"
+            class="submit-btn"
+          >
+            📲 Send Booking on WhatsApp
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <h2>Need a Taxi?</h2>
+
+    <p>
+      Call us directly for booking and enquiries.
+    </p>
+
+    <a
+      class="phone"
+      href="tel:+916284022835"
+    >
+      +91 62840 22835
+    </a>
+
+    <br>
+
+    <a
+      href="https://wa.me/916284022835"
+      target="_blank"
+      class="btn"
+    >
+      WhatsApp Us
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <strong>🚕 Maan Taxi Service</strong>
+
+    <p>
+      Safe • Reliable • Comfortable • Affordable
+    </p>
+
+    <p>
+      © 2026 Maan Taxi Service. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- WHATSAPP BOOKING SCRIPT -->
+
+  <script>
+
+    document
+      .getElementById("bookingForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name =
+         
