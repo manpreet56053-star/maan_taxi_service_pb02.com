@@ -4,769 +4,198 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Maan Taxi Service | Safe & Reliable Taxi</title>
+<title>Maan Taxi Service | Premium Travel</title>
 
 <meta name="description"
-content="Maan Taxi Service provides safe, reliable and affordable local, outstation and airport taxi services.">
+content="Maan Taxi Service - Premium, safe and reliable taxi service for local, outstation and airport travel.">
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f7f8f6;
-  color:#17231f;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f5ef;
+    color:#183b35;
+    line-height:1.6;
 }
+
+/* ===== COLORS ===== */
 
 :root{
-  --green:#073b32;
-  --green2:#0d5b4b;
-  --yellow:#ffc83d;
-  --light:#f7f8f6;
-  --white:#fff;
+    --green:#073b35;
+    --green2:#0b5148;
+    --gold:#d7a928;
+    --gold2:#f1c75b;
+    --cream:#f7f5ef;
+    --white:#ffffff;
+    --text:#173d37;
+    --muted:#6c7774;
 }
 
-/* NAVBAR */
+/* ===== HEADER ===== */
 
 header{
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:rgba(7,59,50,.97);
-  color:white;
-  padding:18px 6%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 4px 20px rgba(0,0,0,.12);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,59,53,.94);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.navbar{
+    max-width:1150px;
+    margin:auto;
+    padding:18px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .logo{
-  font-size:23px;
-  font-weight:800;
+    color:white;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:800;
 }
 
 .logo span{
-  color:var(--yellow);
+    color:var(--gold2);
 }
 
-nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:25px;
-  font-size:15px;
-  font-weight:600;
+.nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
 }
 
-/* HERO */
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold2);
+}
+
+.nav-btn{
+    background:var(--gold);
+    color:#142b27 !important;
+    padding:11px 20px;
+    border-radius:30px;
+}
+
+/* ===== HERO ===== */
 
 .hero{
-  min-height:680px;
-  background:
-    linear-gradient(rgba(4,39,33,.78),rgba(4,39,33,.88)),
-    linear-gradient(135deg,#0d5b4b,#062e28);
-  color:white;
-  display:flex;
-  align-items:center;
-  text-align:center;
-  padding:80px 20px;
+    min-height:100vh;
+    padding:150px 25px 80px;
+    background:
+    radial-gradient(circle at 80% 20%,rgba(215,169,40,.18),transparent 30%),
+    linear-gradient(135deg,#062f2a,#0a5148);
+    color:white;
+    display:flex;
+    align-items:center;
 }
 
-.hero-content{
-  max-width:900px;
-  margin:auto;
+.hero-container{
+    max-width:1150px;
+    width:100%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:70px;
+    align-items:center;
 }
 
 .badge{
-  display:inline-block;
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.25);
-  padding:9px 18px;
-  border-radius:30px;
-  font-size:14px;
-  margin-bottom:22px;
+    display:inline-block;
+    color:var(--gold2);
+    border:1px solid rgba(241,199,91,.5);
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1px;
+    margin-bottom:22px;
 }
 
 .hero h1{
-  font-size:clamp(42px,8vw,76px);
-  line-height:1.05;
-  font-weight:900;
-  margin-bottom:25px;
+    font-size:64px;
+    line-height:1.05;
+    margin-bottom:25px;
+    letter-spacing:-2px;
 }
 
 .hero h1 span{
-  color:var(--yellow);
+    color:var(--gold2);
 }
 
 .hero p{
-  max-width:680px;
-  margin:auto;
-  font-size:20px;
-  line-height:1.7;
-  color:#e8f1ee;
+    font-size:19px;
+    color:#d9e4e1;
+    max-width:600px;
+    margin-bottom:35px;
 }
 
 .buttons{
-  margin-top:35px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 .btn{
-  display:inline-block;
-  text-decoration:none;
-  padding:16px 30px;
-  border-radius:50px;
-  font-weight:800;
-  margin:6px;
-  transition:.25s;
+    display:inline-block;
+    text-decoration:none;
+    padding:15px 28px;
+    border-radius:40px;
+    font-weight:700;
+    transition:.3s;
 }
 
-.btn-primary{
-  background:var(--yellow);
-  color:#111;
+.btn-gold{
+    background:var(--gold2);
+    color:#17332e;
 }
 
-.btn-whatsapp{
-  background:#25d366;
-  color:white;
+.btn-gold:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(241,199,91,.25);
 }
 
-.btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 25px rgba(0,0,0,.18);
+.btn-outline{
+    color:white;
+    border:1px solid rgba(255,255,255,.35);
 }
 
-/* TRUST BAR */
-
-.trust{
-  background:white;
-  padding:22px 6%;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  text-align:center;
-  box-shadow:0 5px 25px rgba(0,0,0,.06);
+.btn-outline:hover{
+    border-color:var(--gold2);
+    color:var(--gold2);
 }
 
-.trust div{
-  font-weight:700;
-  color:#23443c;
+/* ===== PREMIUM CARD ===== */
+
+.luxury-card{
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:28px;
+    padding:35px;
+    backdrop-filter:blur(15px);
+    box-shadow:0 25px 60px rgba(0,0,0,.22);
 }
 
-.trust strong{
-  display:block;
-  font-size:25px;
-  color:var(--green);
-}
-
-/* SECTIONS */
-
-section{
-  padding:85px 6%;
-}
-
-.heading{
-  text-align:center;
-  max-width:700px;
-  margin:0 auto 50px;
-}
-
-.heading small{
-  color:#0d745f;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:2px;
-}
-
-.heading h2{
-  font-size:clamp(32px,5vw,48px);
-  margin:12px 0;
-  color:var(--green);
-}
-
-.heading p{
-  color:#68746f;
-  font-size:17px;
-}
-
-/* SERVICES */
-
-.services{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-  max-width:1150px;
-  margin:auto;
-}
-
-.card{
-  background:white;
-  border-radius:22px;
-  padding:35px 28px;
-  box-shadow:0 10px 35px rgba(0,0,0,.07);
-  transition:.3s;
-  border:1px solid #edf0ee;
-}
-
-.card:hover{
-  transform:translateY(-7px);
-  box-shadow:0 18px 40px rgba(0,0,0,.11);
-}
-
-.icon{
-  width:65px;
-  height:65px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#edf8f4;
-  border-radius:18px;
-  font-size:32px;
-  margin-bottom:22px;
-}
-
-.card h3{
-  font-size:23px;
-  margin-bottom:10px;
-}
-
-.card p{
-  color:#6d7773;
-  line-height:1.7;
-}
-
-/* WHY US */
-
-.why{
-  background:#073b32;
-  color:white;
-}
-
-.why .heading h2{
-  color:white;
-}
-
-.why .heading p{
-  color:#c7d8d3;
-}
-
-.features{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-
-.feature{
-  background:rgba(255,255,255,.08);
-  padding:28px 18px;
-  border-radius:18px;
-  text-align:center;
-  border:1px solid rgba(255,255,255,.1);
-}
-
-.feature-icon{
-  font-size:35px;
-  margin-bottom:12px;
-}
-
-.feature h3{
-  font-size:17px;
-  margin-bottom:7px;
-}
-
-.feature p{
-  color:#c8d9d5;
-  font-size:14px;
-}
-
-/* BOOKING */
-
-.booking-section{
-  background:#f7f8f6;
-}
-
-.booking-box{
-  max-width:800px;
-  margin:auto;
-  background:white;
-  padding:40px;
-  border-radius:25px;
-  box-shadow:0 15px 45px rgba(0,0,0,.09);
-}
-
-.booking-box h2{
-  text-align:center;
-  color:var(--green);
-  margin-bottom:8px;
-  font-size:32px;
-}
-
-.booking-box .subtitle{
-  text-align:center;
-  color:#777;
-  margin-bottom:30px;
-}
-
-.form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-}
-
-input,select{
-  width:100%;
-  padding:17px;
-  border:1px solid #dfe4e1;
-  border-radius:12px;
-  font-size:16px;
-  outline:none;
-  background:white;
-}
-
-input:focus,select:focus{
-  border-color:#0d745f;
-}
-
-.full{
-  grid-column:1/-1;
-}
-
-.book-button{
-  width:100%;
-  border:none;
-  background:var(--yellow);
-  padding:18px;
-  border-radius:12px;
-  font-size:17px;
-  font-weight:800;
-  cursor:pointer;
-  margin-top:5px;
-}
-
-/* CTA */
-
-.cta{
-  background:
-    linear-gradient(135deg,#0b5c4b,#073b32);
-  color:white;
-  text-align:center;
-  padding:75px 20px;
-}
-
-.cta h2{
-  font-size:clamp(32px,6vw,50px);
-  margin-bottom:12px;
-}
-
-.cta p{
-  color:#d2e2de;
-  font-size:18px;
-  margin-bottom:25px;
-}
-
-.phone{
-  font-size:30px;
-  font-weight:900;
-  margin:18px 0;
-}
-
-/* FOOTER */
-
-footer{
-  background:#042b25;
-  color:#b9c8c4;
-  text-align:center;
-  padding:25px 15px;
-  font-size:14px;
-}
-
-footer strong{
-  color:white;
-}
-
-/* MOBILE */
-
-@media(max-width:750px){
-
-  header{
-    padding:16px 5%;
-  }
-
-  .logo{
-    font-size:19px;
-  }
-
-  nav{
-    display:none;
-  }
-
-  .hero{
-    min-height:650px;
-    padding:70px 18px;
-  }
-
-  .hero p{
-    font-size:17px;
-  }
-
-  .trust{
-    grid-template-columns:1fr;
-    gap:20px;
-  }
-
-  section{
-    padding:65px 5%;
-  }
-
-  .services{
-    grid-template-columns:1fr;
-  }
-
-  .features{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .booking-box{
-    padding:25px 18px;
-  }
-
-  .form-grid{
-    grid-template-columns:1fr;
-  }
-
-  .full{
-    grid-column:auto;
-  }
-
-  .phone{
-    font-size:25px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<!-- HEADER -->
-
-<header>
-  <div class="logo">🚕 Maan <span>Taxi Service</span></div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#booking">Book Taxi</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-  <div class="hero-content">
-
-    <div class="badge">⭐ Trusted Taxi Service</div>
-
-    <h1>
-      Your Journey.<br>
-      <span>Our Responsibility.</span>
-    </h1>
-
-    <p>
-      Safe, comfortable and reliable taxi service for
-      local trips, outstation journeys and airport transfers.
-    </p>
-
-    <div class="buttons">
-
-      <a href="#booking" class="btn btn-primary">
-        🚕 Book a Taxi
-      </a>
-
-      <a
-        href="https://wa.me/916284022835?text=Hello%20Maan%20Taxi%20Service,%20I%20want%20to%20book%20a%20taxi."
-        class="btn btn-whatsapp">
-        💬 WhatsApp
-      </a>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- TRUST -->
-
-<div class="trust">
-
-  <div>
-    <strong>24/7</strong>
-    Booking Support
-  </div>
-
-  <div>
-    <strong>100%</strong>
-    Customer Focus
-  </div>
-
-  <div>
-    <strong>Safe</strong>
-    Comfortable Rides
-  </div>
-
-</div>
-
-
-<!-- SERVICES -->
-
-<section id="services">
-
-  <div class="heading">
-    <small>Our Services</small>
-    <h2>Travel Your Way</h2>
-    <p>
-      Professional taxi solutions designed for every journey.
-    </p>
-  </div>
-
-  <div class="services">
-
-    <div class="card">
-      <div class="icon">🏙️</div>
-      <h3>Local Taxi</h3>
-      <p>
-        Convenient and comfortable rides for your daily
-        local travel and city journeys.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🛣️</div>
-      <h3>Outstation Trips</h3>
-      <p>
-        Reliable long-distance taxi service for family trips,
-        business travel and holidays.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">✈️</div>
-      <h3>Airport Transfer</h3>
-      <p>
-        Hassle-free airport pickup and drop with
-        comfortable and timely service.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- WHY US -->
-
-<section class="why">
-
-  <div class="heading">
-    <small>Why Choose Us</small>
-    <h2>Ride With Confidence</h2>
-    <p>
-      We focus on safety, comfort and a smooth booking experience.
-    </p>
-  </div>
-
-  <div class="features">
-
-    <div class="feature">
-      <div class="feature-icon">🛡️</div>
-      <h3>Safe Travel</h3>
-      <p>Safety comes first on every journey.</p>
-    </div>
-
-    <div class="feature">
-      <div class="feature-icon">⏰</div>
-      <h3>On-Time Service</h3>
-      <p>We value your time.</p>
-    </div>
-
-    <div class="feature">
-      <div class="feature-icon">💰</div>
-      <h3>Fair Pricing</h3>
-      <p>Affordable and transparent service.</p>
-    </div>
-
-    <div class="feature">
-      <div class="feature-icon">🤝</div>
-      <h3>Trusted Service</h3>
-      <p>Friendly and professional experience.</p>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- BOOKING -->
-
-<section class="booking-section" id="booking">
-
-  <div class="heading">
-    <small>Quick Booking</small>
-    <h2>Book Your Taxi</h2>
-    <p>
-      Enter your trip details and send your booking directly on WhatsApp.
-    </p>
-  </div>
-
-  <div class="booking-box">
-
-    <h2>🚕 Maan Taxi Service</h2>
-    <p class="subtitle">Fill the details below</p>
-
-    <form onsubmit="sendBooking(event)">
-
-      <div class="form-grid">
-
-        <input
-          id="name"
-          type="text"
-          placeholder="Your Name"
-          required>
-
-        <input
-          id="mobile"
-          type="tel"
-          placeholder="Your Mobile Number"
-          required>
-
-        <input
-          id="pickup"
-          type="text"
-          placeholder="Pickup Location"
-          required>
-
-        <input
-          id="drop"
-          type="text"
-          placeholder="Drop Location"
-          required>
-
-        <select id="service" required>
-          <option value="">Select Service</option>
-          <option>Local Taxi</option>
-          <option>Outstation Taxi</option>
-          <option>Airport Transfer</option>
-        </select>
-
-        <input
-          id="date"
-          type="date"
-          required>
-
-        <button class="book-button full" type="submit">
-          💬 Send Booking on WhatsApp
-        </button>
-
-      </div>
-
-    </form>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT CTA -->
-
-<section class="cta" id="contact">
-
-  <h2>Need a Taxi?</h2>
-
-  <p>
-    Call us or book instantly through WhatsApp.
-  </p>
-
-  <div class="phone">
-    📞 6284022835
-  </div>
-
-  <a
-    href="tel:+916284022835"
-    class="btn btn-primary">
-    📞 Call Now
-  </a>
-
-  <a
-    href="https://wa.me/916284022835"
-    class="btn btn-whatsapp">
-    💬 WhatsApp
-  </a>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-  © 2026 <strong>Maan Taxi Service</strong> · All Rights Reserved.
-</footer>
-
-
-<script>
-
-function sendBooking(event){
-
-  event.preventDefault();
-
-  const name =
-    document.getElementById("name").value;
-
-  const mobile =
-    document.getElementById("mobile").value;
-
-  const pickup =
-    document.getElementById("pickup").value;
-
-  const drop =
-    document.getElementById("drop").value;
-
-  const service =
-    document.getElementById("service").value;
-
-  const date =
-    document.getElementById("date").value;
-
-  const message =
-`🚕 MAAN TAXI SERVICE
-
-New Taxi Booking
-
-👤 Name: ${name}
-📱 Mobile: ${mobile}
-📍 Pickup: ${pickup}
-🏁 Drop: ${drop}
-🚕 Service: ${service}
-📅 Date: ${date}
-
-Please confirm my booking.`;
-
-  const whatsappURL =
-    "https://wa.me/916284022835?text=" +
-    encodeURIComponent(message);
-
-  window.open(whatsappURL, "_blank");
-}
-
-</script>
-
-</body>
-</html>
+.car-icon{
+   
