@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maan Taxi Service</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+    }
+
+    header {
+      background: #12382f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 16px;
+    }
+
+    .hero {
+      padding: 50px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #12382f, #2d705f);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #f5c542;
+      color: #111;
+      padding: 14px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .booking {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 25px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+
+    .booking h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #12382f;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .services {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .services h2 {
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 25px;
+      text-align: center;
+      background: #12382f;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🚕 Maan Taxi Service</h1>
+    <p>Safe • Reliable • Affordable Taxi Service</p>
+  </header>
+
+  <section class="hero">
+    <h2>Your Journey, Our Responsibility</h2>
+    <p>Book a taxi for local travel, outstation trips and airport transfers.</p>
+    <a href="#booking" class="btn">Book Taxi</a>
+  </section>
+
+  <section class="booking" id="booking">
+    <h2>🚕 Book Your Taxi</h2>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+
+      <input type="tel" placeholder="Mobile Number" required>
+
+      <input type="text" placeholder="Pickup Location" required>
+
+      <input type="text" placeholder="Drop Location" required>
+
+      <input type="date" required>
+
+      <input type="time" required>
+
+      <select required>
+        <option value="">Select Taxi Type</option>
+        <option>Mini</option>
+        <option>Sedan</option>
+        <option>SUV</option>
+        <option>Innova</option>
+      </select>
+
+      <textarea placeholder="Additional Message"></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <section class="services">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>🚕 Local Taxi</h3>
+        <p>Comfortable taxi service for local travel.</p>
+      </div>
+
+      <div class="card">
+        <h3>🛣️ Outstation</h3>
+        <p>Reliable one-way and round-trip taxi service.</p>
+      </div>
+
+      <div class="card">
+        <h3>✈️ Airport Transfer</h3>
+        <p>On-time airport pickup and drop service.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Maan Taxi Service. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
