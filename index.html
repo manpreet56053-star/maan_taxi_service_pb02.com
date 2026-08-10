@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maan Taxi Service</title>
+
+  <title>Maan Taxi Service | Reliable Taxi Service</title>
+
+  <meta name="description"
+        content="Maan Taxi Service - Safe, reliable and affordable taxi service for local, outstation and airport travel.">
 
   <style>
     * {
@@ -13,195 +17,371 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7f8;
+      color: #17221f;
+      line-height: 1.6;
     }
 
     header {
-      background: #12382f;
+      background: #073b32;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    header h1 {
-      font-size: 30px;
-      margin-bottom: 8px;
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
     }
 
-    header p {
-      font-size: 16px;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+      font-weight: 600;
     }
 
     .hero {
-      padding: 50px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #12382f, #2d705f);
+      background: linear-gradient(135deg, #073b32, #126653);
       color: white;
+      text-align: center;
+      padding: 90px 20px;
     }
 
-    .hero h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
+    .hero .taxi {
+      font-size: 55px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 68px);
+      margin: 10px 0;
+      font-weight: 900;
     }
 
     .hero p {
-      font-size: 18px;
-      margin-bottom: 25px;
+      font-size: 21px;
+      max-width: 700px;
+      margin: 15px auto 30px;
     }
 
     .btn {
       display: inline-block;
-      background: #f5c542;
+      background: #ffc83d;
       color: #111;
-      padding: 14px 25px;
-      border-radius: 30px;
       text-decoration: none;
-      font-weight: bold;
-    }
-
-    .booking {
-      max-width: 600px;
-      margin: 30px auto;
-      padding: 25px;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-    }
-
-    .booking h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 13px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    button {
-      width: 100%;
-      padding: 14px;
+      padding: 15px 32px;
+      border-radius: 35px;
+      font-size: 18px;
+      font-weight: 800;
+      margin: 7px;
       border: none;
-      border-radius: 8px;
-      background: #12382f;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn.whatsapp {
+      background: #25d366;
       color: white;
-      font-size: 17px;
-      font-weight: bold;
     }
 
-    .services {
-      padding: 30px 20px;
-      max-width: 1000px;
-      margin: auto;
+    section {
+      padding: 65px 7%;
+    }
+
+    .section-title {
       text-align: center;
-    }
-
-    .services h2 {
-      margin-bottom: 20px;
+      font-size: 38px;
+      margin-bottom: 35px;
+      color: #073b32;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1100px;
+      margin: auto;
     }
 
     .card {
       background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      padding: 30px 22px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .card .icon {
+      font-size: 42px;
+      margin-bottom: 12px;
     }
 
     .card h3 {
-      margin-bottom: 10px;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .booking {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 22px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.1);
+    }
+
+    .booking input,
+    .booking select {
+      width: 100%;
+      padding: 16px;
+      margin: 9px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .booking input:focus,
+    .booking select:focus {
+      border-color: #126653;
+    }
+
+    .booking button {
+      width: 100%;
+      margin: 15px 0 0;
+    }
+
+    .contact {
+      background: #073b32;
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .phone {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 20px 0;
     }
 
     footer {
-      margin-top: 30px;
-      padding: 25px;
+      background: #052b25;
+      color: #ccc;
       text-align: center;
-      background: #12382f;
-      color: white;
+      padding: 22px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 16px 5%;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 65px 18px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 5%;
+      }
+
+      .booking {
+        padding: 25px 18px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>🚕 Maan Taxi Service</h1>
-    <p>Safe • Reliable • Affordable Taxi Service</p>
-  </header>
+<header>
+  <div class="logo">🚕 Maan Taxi Service</div>
 
-  <section class="hero">
-    <h2>Your Journey, Our Responsibility</h2>
-    <p>Book a taxi for local travel, outstation trips and airport transfers.</p>
-    <a href="#booking" class="btn">Book Taxi</a>
-  </section>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#booking">Book Taxi</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section class="booking" id="booking">
-    <h2>🚕 Book Your Taxi</h2>
 
-    <form>
-      <input type="text" placeholder="Your Name" required>
+<section class="hero" id="home">
+  <div class="taxi">🚕</div>
 
-      <input type="tel" placeholder="Mobile Number" required>
+  <h1>Your Journey, Our Responsibility</h1>
 
-      <input type="text" placeholder="Pickup Location" required>
+  <p>
+    Safe • Reliable • Affordable Taxi Service
+    <br>
+    Local Trips • Outstation • Airport Transfers
+  </p>
 
-      <input type="text" placeholder="Drop Location" required>
+  <a href="#booking" class="btn">Book Taxi</a>
 
-      <input type="date" required>
+  <a
+    href="https://wa.me/916284022835?text=Hello%20Maan%20Taxi%20Service,%20I%20want%20to%20book%20a%20taxi."
+    class="btn whatsapp">
+    💬 WhatsApp
+  </a>
+</section>
 
-      <input type="time" required>
 
-      <select required>
-        <option value="">Select Taxi Type</option>
-        <option>Mini</option>
-        <option>Sedan</option>
-        <option>SUV</option>
-        <option>Innova</option>
+<section id="services">
+
+  <h2 class="section-title">Our Services</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">🏙️</div>
+      <h3>Local Taxi</h3>
+      <p>Comfortable and reliable taxi service for local travel.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛣️</div>
+      <h3>Outstation</h3>
+      <p>Safe and convenient rides for long-distance journeys.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">✈️</div>
+      <h3>Airport Transfer</h3>
+      <p>On-time pickup and drop service for airport travel.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="booking">
+
+  <h2 class="section-title">🚕 Book Your Taxi</h2>
+
+  <div class="booking">
+
+    <form onsubmit="bookTaxi(event)">
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+        required>
+
+      <input
+        type="tel"
+        id="mobile"
+        placeholder="Mobile Number"
+        required>
+
+      <input
+        type="text"
+        id="pickup"
+        placeholder="Pickup Location"
+        required>
+
+      <input
+        type="text"
+        id="drop"
+        placeholder="Drop Location"
+        required>
+
+      <select id="service" required>
+        <option value="">Select Service</option>
+        <option>Local Taxi</option>
+        <option>Outstation Taxi</option>
+        <option>Airport Transfer</option>
       </select>
 
-      <textarea placeholder="Additional Message"></textarea>
+      <input
+        type="date"
+        id="date"
+        required>
 
-      <button type="submit">Book Now</button>
+      <button type="submit" class="btn">
+        🚕 Book Taxi on WhatsApp
+      </button>
+
     </form>
-  </section>
 
-  <section class="services">
-    <h2>Our Services</h2>
+  </div>
+</section>
 
-    <div class="cards">
 
-      <div class="card">
-        <h3>🚕 Local Taxi</h3>
-        <p>Comfortable taxi service for local travel.</p>
-      </div>
+<section class="contact" id="contact">
 
-      <div class="card">
-        <h3>🛣️ Outstation</h3>
-        <p>Reliable one-way and round-trip taxi service.</p>
-      </div>
+  <h2>Contact Maan Taxi Service</h2>
 
-      <div class="card">
-        <h3>✈️ Airport Transfer</h3>
-        <p>On-time airport pickup and drop service.</p>
-      </div>
+  <p>For booking and enquiries, call or WhatsApp us.</p>
 
-    </div>
-  </section>
+  <div class="phone">📞 6284022835</div>
 
-  <footer>
-    <p>© 2026 Maan Taxi Service. All Rights Reserved.</p>
-  </footer>
+  <a href="tel:+916284022835" class="btn">
+    📞 Call Now
+  </a>
+
+  <a
+    href="https://wa.me/916284022835"
+    class="btn whatsapp">
+    💬 WhatsApp Now
+  </a>
+
+</section>
+
+
+<footer>
+  © 2026 Maan Taxi Service. All Rights Reserved.
+</footer>
+
+
+<script>
+  function bookTaxi(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const mobile = document.getElementById("mobile").value;
+    const pickup = document.getElementById("pickup").value;
+    const drop = document.getElementById("drop").value;
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("date").value;
+
+    const message =
+      "🚕 *Maan Taxi Service - New Booking*%0A%0A" +
+      "👤 Name: " + encodeURIComponent(name) + "%0A" +
+      "📱 Mobile: " + encodeURIComponent(mobile) + "%0A" +
+      "📍 Pickup: " + encodeURIComponent(pickup) + "%0A" +
+      "🏁 Drop: " + encodeURIComponent(drop) + "%0A" +
+      "🚕 Service: " + encodeURIComponent(service) + "%0A" +
+      "📅 Date: " + encodeURIComponent(date);
+
+    window.open(
+      "https://wa.me/916284022835?text=" + message,
+      "_blank"
+    );
+  }
+</script>
 
 </body>
 </html>
